@@ -1,2 +1,2 @@
 # Vast-Socials
-Official Vast™ Social's Links
+Official Vast™ Socials
