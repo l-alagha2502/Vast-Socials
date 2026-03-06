@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vast™ Socials</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 50px 20px;
+            color: white;
+            font-family: 'Montserrat', sans-serif; /* Applied Montserrat here */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #020617;
+            overflow-x: hidden;
+        }
+
+        /* Optimized Wave Animation */
+        .ocean { 
+          height: 5%;
+          width: 100%;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          background: #020617;
+          z-index: -1;
+        }
+
+        .wave {
+          background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+          position: absolute;
+          top: -198px;
+          width: 6400px;
+          height: 198px;
+          animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+          transform: translate3d(0, 0, 0);
+          opacity: 0.1;
+        }
+
+        .wave:nth-of-type(2) {
+          top: -175px;
+          animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -0.125s infinite;
+          opacity: 0.2;
+        }
+
+        @keyframes wave {
+          0% { margin-left: 0; }
+          100% { margin-left: -1600px; }
+        }
+
+        @keyframes swell {
+          0%, 100% { transform: translate3d(0, -25px, 0); }
+          50% { transform: translate3d(0, 5px, 0); }
+        }
+
+        .container { 
+            width: 100%; 
+            max-width: 400px; 
+            text-align: center; 
+            z-index: 1;
+        }
+
+        .logo { 
+            width: 140px; 
+            height: 140px; 
+            border-radius: 50%; 
+            background: white; 
+            margin-bottom: 25px; 
+            display: inline-block; 
+            object-fit: contain;
+            padding: 5px;
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
+        }
+
+        h1 { 
+            font-size: 2.2rem; 
+            margin-bottom: 10px; 
+            letter-spacing: -0.5px;
+            font-weight: 800;
+        }
+
+        p { 
+            color: #94a3b8; 
+            margin-bottom: 40px; 
+            font-size: 1.1rem; 
+            line-height: 1.6;
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .link {
+            display: block;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            margin: 14px 0;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .link:hover {
+            background: #38bdf8;
+            color: #020617;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    
+    <div class="container">
+        <img src="logo.png" alt="Vast Logo" class="logo">
+        
+        <h1>Vast™</h1> 
+        <p>Empowering youth to break the cycle of wasted potential.</p>
+
+        <a href="mailto:vastyouth.org@gmail.com?subject=Inquiry about Vast™" class="link">Email Us</a>
+        <a href="https://discord.gg/AXSfnbHTzY" class="link">Join our Discord Community</a>
+        <a href="https://wa.me/97433820466" class="link">Message Us</a>
+    </div>
+
+</body>
+</html>
