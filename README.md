@@ -1,2 +1,2 @@
 # Vast-Socials
-Official Vast™ Socials
+A small project 
